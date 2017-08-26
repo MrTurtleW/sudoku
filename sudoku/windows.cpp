@@ -32,17 +32,17 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPreInstance,
 	int cx = GetSystemMetrics(SM_CXSCREEN)/2;
 	int cy = GetSystemMetrics(SM_CYSCREEN)/2;
 
-	hwnd = CreateWindow(szAppName,
-		TEXT("sudoku"),
-		WS_OVERLAPPEDWINDOW,
-		cx,
-		cy,
-		500,
-		500,
-		NULL,
-		NULL,
-		hInstance,
-		NULL);
+	hwnd = CreateWindow(szAppName,	//szWindowClass:		the name of the application
+		TEXT("sudoku"),				//szTitle:				the text that appears in the title bar
+		WS_OVERLAPPEDWINDOW,		//WS_OVERLAPPEDWINDOW:	the type of window to create
+		cx,							//CW_USEDEFAULT:		initial position x
+		cy,							//CW_USEDEFAULT:		initial position y
+		500,						//						initial size width
+		500,						//						initial size height
+		NULL,						//						the parent of this window
+		NULL,						//						this application does not have a menu bar
+		hInstance,					//hInstance:			the first parameter from WinMain
+		NULL);						//						not used in this application
 
 	ShowWindow(hwnd, iCmdShow);
 	UpdateWindow(hwnd);
