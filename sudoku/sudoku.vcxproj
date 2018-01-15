@@ -146,9 +146,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="GamePad.cpp" />
     <ClCompile Include="windows.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GamePad.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
